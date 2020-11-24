@@ -1,7 +1,7 @@
 # interfaceクラス
 module Domain
   module Task
-    class TaskRepositoryIf
+    class TaskRepositoryIF
       # task
       def save(task)
         raise "Not implemented yet"

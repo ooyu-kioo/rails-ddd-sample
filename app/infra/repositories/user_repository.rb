@@ -1,7 +1,7 @@
 # 実装class
 module Infra
   module Repositories
-    class UserRepository < Domain::User::UserRepositoryIf
+    class UserRepository < Domain::User::UserRepositoryIF
       def save(task)
         raise "Not implemented yet"
       end
