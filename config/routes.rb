@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  scope module: 'web' do
+    scope module: 'controllers' do
+      # Commands
+      post 'tasks', to: 'tasks#create_task'
+
+      # Queries
+      # get 'tasks/:task_id', to: 'tasks#find_task_by_id'
+    end
+  end
 end

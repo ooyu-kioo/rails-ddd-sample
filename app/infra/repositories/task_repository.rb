@@ -1,9 +1,10 @@
 # 実装class
 module Infra
   module Repositories
-    class TaskRepository < Domain::Task::TaskRepositoryIf
+    class TaskRepository < Domain::Task::TaskRepositoryIF
       def save(task)
-        raise "Not implemented yet"
+        task = Task.build(task)
+        task.save
       end
 
       def update(task)
