@@ -1,6 +1,8 @@
+require_relative '../../controllers/application_controller'
+
 module Web
-  module controllers
-    class TasksController < Controllers::ApplicationController
+  module Controllers
+    class TasksController < ApplicationController
       def create_task
         command = Application::Task::Commands::CreateTaskCommand.new(
           user_id: params[:user_id],

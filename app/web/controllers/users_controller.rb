@@ -1,6 +1,6 @@
 module Web
-  module controllers
-    class UsersController < Controllers::ApplicationController
+  module Controllers
+    class UsersController < ApplicationController
 
     end
   end
