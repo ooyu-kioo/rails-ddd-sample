@@ -1,4 +1,5 @@
 require_relative '../../infra/repositories/task_repository'
+require_relative '../../infra/queries/tasks_query'
 require_relative '../../domain/task/task'
 
 module Application
@@ -19,7 +20,10 @@ module Application
           @task_repository.save(task)
           task.id
         end
-        
+      end
+
+      def find_all_tasks
+        Infra::Queries::TasksQuery.find_all_tasks
       end
     end
   end
