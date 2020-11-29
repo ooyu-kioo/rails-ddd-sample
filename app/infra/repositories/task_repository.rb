@@ -4,6 +4,7 @@ require_relative '../../domain/task/task_repository_IF'
 module Infra
   module Repositories
     class TaskRepository < Domain::Task::TaskRepositoryIF
+      # task
       def save(task)
         task.save
       end
@@ -14,6 +15,11 @@ module Infra
 
       def delete(task)
         raise "Not implemented yet"
+      end
+
+      # sub_task
+      def save_sub_task(sub_task)
+        sub_task.save
       end
     end
   end
