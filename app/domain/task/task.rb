@@ -4,7 +4,10 @@ module Domain
   module Task
     class Task < Infra::Models::ApplicationRecord
       has_many :sub_tasks
-      attribute :user_id, :name, :status
+
+      attribute :user_id, :integer
+      attribute :name, :string
+      attribute :status, :integer, default: 0
 
     end
   end
