@@ -1,3 +1,6 @@
+require_relative '../../infra/repositories/task_repository'
+require_relative '../../domain/task/task'
+
 module Application
   module Task
     class TaskUseCase

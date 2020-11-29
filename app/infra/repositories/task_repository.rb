@@ -1,9 +1,10 @@
+require_relative '../../domain/task/task_repository_IF'
+
 # 実装class
 module Infra
   module Repositories
     class TaskRepository < Domain::Task::TaskRepositoryIF
       def save(task)
-        task = Task.build(task)
         task.save
       end
 
