@@ -30,6 +30,6 @@ class TasksController < ApplicationController
   # Query
   def find_all_tasks
     tasks = Application::Task::TaskUseCase.new.find_all_tasks
-    render json: { tasks: tasks }, status: :ok
+    render json: tasks, status: :ok
   end
 end
